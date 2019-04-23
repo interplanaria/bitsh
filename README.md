@@ -4,7 +4,7 @@ Bitcom Shell
 
 [What is Bitcom?](https://bitcom.bitdb.network)
 
-![bitsh](./bitsh.png)
+![bitsh](./bitsh.gif)
 
 # 1. What?
 
