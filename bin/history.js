@@ -6,14 +6,15 @@ module.exports = function(args, done) {
       find: {
         "in.e.a": process.env.address,
         "out.s1": "$"
-      }
+      },
+      sort: { "blk.i": 1 }
     }
   }
   if (args.address && /^~[A-Za-z0-1]+/.test(args.address)) {
     query.q.find["in.e.a"] = args.address.slice(1)
   }
   get(query, function(r) {
-    let res = [].concat(r.u).concat(r.c)
+    let res = [].concat(r.c).concat(r.u)
     if (res.length > 0) {
       let result = res.map(function(item) {
         let out = item.out.filter(function(o) {
