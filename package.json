@@ -1,0 +1,25 @@
+{
+  "name": "bitsh",
+  "version": "0.1.24",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "bitsh": "./index.js"
+  },
+  "author": "",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "datapay": "0.0.13",
+    "dotenv": "^6.2.0",
+    "make-dir": "^3.0.0",
+    "mkdirp": "^0.5.1",
+    "qrcode-terminal": "^0.12.0",
+    "terminal-kit": "^1.28.0",
+    "vorpal": "^1.12.0",
+    "bsv": "^0.26.4"
+  },
+  "license": "ISC"
+}
