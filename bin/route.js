@@ -135,5 +135,21 @@ module.exports = function(args, done) {
         }
       })
     }
+  } else if (args.arg0 === 'delete') {
+    if (args.arg1 && args.arg2) {
+      if (process.env.address === args.arg1) {
+        done({
+          message: "it is not recommended for admins to add routes, adding routes are for service providers. If you want to act as a service provider, create a separate account (create a new folder and run 'bit init') and run 'route add' again."
+        })
+      } else {
+        post(["$", "route", "delete", args.arg1, args.arg2], function(err, tx) {
+          done(err, tx)
+        })
+      }
+    } else {
+      done({
+        message: "Syntax: '$ route delete [address] [path]'"
+      })
+    }
   }
 }
